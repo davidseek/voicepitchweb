@@ -1,6 +1,6 @@
 # Voicepitchweb
 
-Build in [Angular CLI](https://github.com/angular/angular-cli)
+Build in [Angular CLI](https://github.com/angular/angular-cli)<br>
 Web extension for [VoicePitchAnalzyer](https://github.com/carolanitz/VoicePitchAnalyzer) and the original [VoicePitchAnalyzer](https://play.google.com/store/apps/details?id=de.lilithwittmann.voicepitchanalyzer&hl=en_US)
 
 ## How to
