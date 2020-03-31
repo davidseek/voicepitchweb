@@ -5,11 +5,11 @@ Web extension for [VoicePitchAnalzyer](https://github.com/carolanitz/VoicePitchA
 
 ## How to
 
-Clone repositoy and `cd` into folder.
-Run `npm install` to install dependencies.
-Run `code .` to open project in [Visual Code](https://code.visualstudio.com/)
-Run `npm install -g @angular/cli` to install/update Angular CLI.
-Run `ng serve` to build and run locally.
-Navigate browser to `http://localhost:4200/`.
+- clone repositoy and `cd` into folder
+- run `npm install` to install dependencies
+- run `code .` to open project in [Visual Code](https://code.visualstudio.com/)
+- run `npm install -g @angular/cli` to install/update Angular CLI
+- run `ng serve` to build and run locally
+- navigate browser to `http://localhost:4200/`
 
 Please feel free to reach out to [Carola](https://twitter.com/_Caro_N) or [David](https://twitter.com/DavidSeek) if you have ideas for unlisted contributions.
