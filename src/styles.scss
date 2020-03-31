@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+:root {
+
+  --color-background: #FFFFFF;
+  --color-base-text: #202020;
+  --color-button: #FF79A8;
+  --image-bottom-mask: url('src/assets/img/bottom-mask-light.svg');
+  --image-menu: url('src/assets/img/menu-light.svg');
+  --image-app: url('src/assets/img/app-dark.svg');
+  --image-android: url('src/assets/img/android-light.svg');
+  --image-apple: url('src/assets/img/apple-light.svg');
+  --image-github: url('src/assets/img/github-light.svg');
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    --color-background: #061023;
+    --color-base-text: #EFEFEF;
+    --color-button: #B98FFE;
+    --image-bottom-mask: url('src/assets/img/bottom-mask-dark.svg');
+    --image-menu: url('src/assets/img/menu-dark.svg');
+    --image-app: url('src/assets/img/app-light.svg');
+    --image-android: url('src/assets/img/android-dark.svg');
+    --image-apple: url('src/assets/img/apple-dark.svg');
+    --image-github: url('src/assets/img/github-dark.svg');
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-base-text);
+}
+
+
+@media (hover) {
+    .hoverable {
+      cursor: pointer;
+    }
+  
+    .hoverable:hover {
+      transform: translateY(-1px);
+    }
+  }
+  
