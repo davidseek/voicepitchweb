@@ -11,7 +11,7 @@ const routes: Routes = [
       inspector: true,
     }
   }
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

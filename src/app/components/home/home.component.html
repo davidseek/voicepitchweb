@@ -52,44 +52,15 @@
 
         <div class="row mt-5">
 
-          <div class="col-12 mb-3">
+          <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:0, title:'Available on Play Store'}">
+          </ng-container>
 
-            <div class="link hoverable">
-              <div class="link-icon android">
+          <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:1, title:'Available on App Store'}">
+          </ng-container>
 
-              </div>
+          <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:2, title:'Contributions welcomed'}">
+          </ng-container>
 
-              <div class="link-title">
-                Available on Play Store
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 mb-3 hoverable">
-
-            <div class="link">
-              <div class="link-icon apple">
-
-              </div>
-
-              <div class="link-title">
-                Available on App Store
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 hoverable">
-
-            <div class="link">
-              <div class="link-icon github">
-
-              </div>
-
-              <div class="link-title">
-                Contributions welcomed
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -102,3 +73,16 @@
 </div>
 
 <div class="bottom-mask"></div>
+
+<ng-template #link let-index='index' let-title='title'>
+
+  <div class="col-12 mb-3">
+
+    <div class="link hoverable" (click)="didClickLink(index)">
+      <div class="link-icon android" [ngClass]="getLinkClass(index)"></div>
+      <div class="link-title">
+        {{title}}
+      </div>
+    </div>
+  </div>
+</ng-template>
