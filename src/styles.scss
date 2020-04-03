@@ -15,6 +15,8 @@ router-outlet {
   --color-button: #FF79A8;
   --image-bottom-mask: url('src/assets/img/bottom-mask-light.svg');
   --image-menu: url('src/assets/img/menu-light.svg');
+  --image-home: url('src/assets/img/home-light.svg');
+  --image-legal: url('src/assets/img/legal-light.svg');
   --image-app: url('src/assets/img/app-dark.svg');
   --image-android: url('src/assets/img/android-light.svg');
   --image-apple: url('src/assets/img/apple-light.svg');
@@ -29,6 +31,8 @@ router-outlet {
     --color-button: #B98FFE;
     --image-bottom-mask: url('src/assets/img/bottom-mask-dark.svg');
     --image-menu: url('src/assets/img/menu-dark.svg');
+    --image-home: url('src/assets/img/home-dark.svg');
+    --image-legal: url('src/assets/img/legal-dark.svg');
     --image-app: url('src/assets/img/app-light.svg');
     --image-android: url('src/assets/img/android-dark.svg');
     --image-apple: url('src/assets/img/apple-dark.svg');

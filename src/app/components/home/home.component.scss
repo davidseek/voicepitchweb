@@ -22,14 +22,22 @@
 }
 
 .menu-button {
-  background: var(--image-menu) no-repeat;
   width: 40px;
   height: 40px;
   position: absolute;
-  right: 0px;
-  top: -2px;
-
   opacity: 0;
+}
+
+.home-button {
+  background: var(--image-home) no-repeat;
+  right: 58px;
+  top: -2px;
+}
+
+.legal-button {
+  background: var(--image-legal) no-repeat;
+  right: 8px;
+  top: -4px;
 }
 
 .app-bezel {
@@ -77,7 +85,7 @@
 }
 
 .link {
-    display: inline-block;
+  display: inline-block;
 }
 
 .android {
@@ -99,7 +107,11 @@ $tablet: 768px;
     opacity: 0;
   }
 
-  .menu-button {
+  .home-button {
+    opacity: 1;
+  }
+
+  .legal-button {
     opacity: 1;
   }
 
