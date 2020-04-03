@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+router-outlet {
+  width: 100vw !important;
+}
 
 :root {
 
@@ -40,12 +43,11 @@ body {
 
 
 @media (hover) {
-    .hoverable {
-      cursor: pointer;
-    }
-  
-    .hoverable:hover {
-      transform: translateY(-1px);
-    }
+  .hoverable {
+    cursor: pointer;
   }
-  
+
+  .hoverable:hover {
+    transform: translateY(-1px);
+  }
+}

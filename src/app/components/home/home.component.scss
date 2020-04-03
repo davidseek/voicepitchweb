@@ -1,5 +1,6 @@
 .container {
   height: 100vh;
+  overflow: hidden;
 }
 
 .bottom-mask {
@@ -51,6 +52,7 @@
   margin-top: 2rem;
   padding-top: 2rem;
   height: 100%;
+  overflow: scroll;
 }
 
 .desktop-menu {
@@ -103,11 +105,12 @@ $tablet: 768px;
 
   .app-bezel {
     margin-top: 2rem;
+    margin-bottom: 5rem;
   }
 
   .home-container-spacing {
     margin-top: 0px !important;
-    height: calc(100vh - 104px) !important;
+    height: calc(100vh - 158px) !important;
   }
 
   .desktop-menu {
