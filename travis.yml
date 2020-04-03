@@ -1,0 +1,19 @@
+sudo: required
+dist: bionic
+language: node_js
+node_js:
+  - '12.14.0'
+
+install:
+  - npm install
+  - npm install -g @angular/cli
+
+script:
+  - node --max_old_space_size=5192 node_modules/@angular/cli/bin/ng b --prod
+
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  project: "voicepitchanalyzer"
+  token:
+    secure: "cFbeKwDMUf4Qn0vgESpqHt5stj44d+GkwVy9Ag3zImfFUv2EhV4jfpyglVq7IcT3SJkqwN+ir3/2xz1/PI5XmoebkWtbfdX6TpNTrALT25I6qTEg9/zansQrRwGKlUpw9YFLsyXhQ54vEurXzTx9+ER4aasfz5L8WVynNJ4mHnEyV3fn8TuxSWIzLhu1pJNWqNMjaQyV89bhuepn6/Ta5wVU5smz8hxmvh/i4xj/A80xG6UQ+h1+fUdCNA6D+oU2i/e3zKqbFBjmBwA+V2JpJ1A+yd8ugAaQ1t7gXFJmQQSXY6y6dT5leU5xGxElL/vMyoNvJxp3j94OiSnamvhA68dJ/snYpi60+Vbv2y45nd7lZmmglkAfQRi4tF7dAcPOhcgIxM4Q44um/Xpz3nXPoXAtYoJ1uIhg9kdn0oNhBuNiIBRaFzkn+g2REojhaGfABQr2ryIImDC0CrLtiqPlewqGrnmQR4EGxoHL2xOy1otKx0PLB+rcDVxYsUWeNwt+pBkzSVifH41r60JdBeTKVBaLyLWlUc24R/lvMhhZp4axvxLGh+Lo9hT95aHic70HsIWz/a6f3jrFrZOZtMgnuRPV4mBHSnwZ7X/kaI2Xk79ZBYgcsUKfq3StHeubPNewuBJZJ0Qp4IaNeHVmZzBS35um4YFRw3MD2jn4FpnovyI="
