@@ -1,25 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
 
-  public currentMenuIndex: number = 0 
+  ngAfterViewInit() {
 
-  constructor() { }
-
-  ngOnInit(): void {
+    /** Fix for mobile browser height */
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
 
-  // MARK: - Public
+  // MARK: - Public 
 
-  public didClickMenu(index: number): void {
+  public getLinkClass(index: number): {} {
 
-    if (index > 1) return 
-    this.currentMenuIndex = index 
+    return {
+      'android': index === 0,
+      'apple': index === 1,
+      'github': index === 2
+    }
   }
 
   public didClickLink(index: number): void {
@@ -34,22 +37,6 @@ export class HomeComponent implements OnInit {
 
     if (index === 2) {
       this.open('https://github.com/carolanitz/VoicePitchAnalyzer')
-    }
-  }
-
-  public getMenuStyle(index: number): {} {
-
-    return {
-      'font-weight': index === this.currentMenuIndex ? '600' : '200'
-    }
-  }
-
-  public getLinkClass(index: number): {} {
-
-    return {
-      'android': index === 0,
-      'apple': index === 1,
-      'github': index === 2
     }
   }
 

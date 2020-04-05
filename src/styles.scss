@@ -21,6 +21,7 @@ router-outlet {
   --image-android: url('src/assets/img/android-light.svg');
   --image-apple: url('src/assets/img/apple-light.svg');
   --image-github: url('src/assets/img/github-light.svg');
+  --image-close: url('src/assets/img/close-light.svg');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +38,7 @@ router-outlet {
     --image-android: url('src/assets/img/android-dark.svg');
     --image-apple: url('src/assets/img/apple-dark.svg');
     --image-github: url('src/assets/img/github-dark.svg');
+    --image-close: url('src/assets/img/close-dark.svg');
   }
 }
 

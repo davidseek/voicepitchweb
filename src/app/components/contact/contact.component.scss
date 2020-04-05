@@ -1,0 +1,25 @@
+.home-container-spacing {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  height: 100%;
+  overflow: scroll;
+}
+
+.contact-button {
+    height: 44px;
+    width: 100%;
+    background-color: var(--color-button);
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+@media only screen and (max-width : 768px) {
+
+  .home-container-spacing {
+    margin-top: 0px !important;
+    height: calc(100vh - 158px) !important;
+  }
+}

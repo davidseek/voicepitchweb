@@ -1,79 +1,39 @@
-<div class="container">
+<div class="row home-container-spacing">
 
-  <div class="row pt-3">
+  <div class="col-12 col-md-6">
 
-    <div class="col-11 col-md-7">
+    <div class="intro-container">
 
-      <div class="title-label">
-        Voice Pitch Analyzer
+      <div class="intro-title">
+        Open Source
       </div>
-    </div>
 
-    <div class="col-1 col-md-5">
+      <div class="pt-3">
 
-      <div class="row">
+        Provides insights into a voice's pitch range and shows analytics based on the (traditional) male, female or
+        androgynous pitch ranges.
+      </div>
 
-        <div class="col-6 desktop-menu">
+      <div class="row mt-5">
 
-          <div class="menu-label hoverable pt-2" (click)="didClickMenu(0)" [ngStyle]="getMenuStyle(0)">
-            Home
-          </div>
+        <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:0, title:'Available on Play Store'}">
+        </ng-container>
 
-        </div>
+        <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:1, title:'Available on App Store'}">
+        </ng-container>
 
-        <div class="col-6 desktop-menu">
+        <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:2, title:'Contributions welcome'}">
+        </ng-container>
 
-          <div class="menu-label hoverable pt-2" (click)="didClickMenu(1)" [ngStyle]="getMenuStyle(1)">
-            Privacy Policy
-          </div>
-
-        </div>
-
-        <div class="home-button menu-button hoverable" (click)="didClickMenu(0)"></div>
-        <div class="legal-button menu-button hoverable" (click)="didClickMenu(1)"></div>
       </div>
     </div>
   </div>
 
-  <div class="row home-container-spacing" *ngIf="currentMenuIndex === 0">
+  <div class="col-12 col-md-6">
 
-    <div class="col-12 col-md-6">
-
-      <div class="intro-container">
-
-        <div class="intro-title">
-          Open Source
-        </div>
-
-        <div class="intro-message pt-3">
-
-          Provides insights into a voice's pitch range and shows analytics based on the (traditional) male, female or
-          androgynous pitch ranges.
-        </div>
-
-        <div class="row mt-5">
-
-          <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:0, title:'Available on Play Store'}">
-          </ng-container>
-
-          <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:1, title:'Available on App Store'}">
-          </ng-container>
-
-          <ng-container [ngTemplateOutlet]="link" [ngTemplateOutletContext]="{index:2, title:'Contributions welcome'}">
-          </ng-container>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6">
-
-      <div class="app-bezel"></div>
-    </div>
+    <div class="app-bezel"></div>
   </div>
 </div>
-
-<div class="bottom-mask"></div>
 
 <ng-template #link let-index='index' let-title='title'>
 

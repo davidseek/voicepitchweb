@@ -1,0 +1,81 @@
+.container {
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.mobile-menu {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-background);
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transition: opacity 300ms;
+  pointer-events: none;
+}
+
+.menu-close-button {
+  background: var(--image-close) no-repeat;
+  width: 40px;
+  height: 40px;
+  right: 8px;
+  top: 14px;
+  position: absolute;
+}
+
+.menu-open-button {
+    background: var(--image-menu) no-repeat;
+    width: 40px;
+    height: 40px;
+    right: 8px;
+    top: 14px;
+    position: absolute;
+    display: none;
+  }
+
+.bottom-mask {
+  height: 20vh;
+  width: 100vw;
+  background-image: var(--image-bottom-mask);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.title-label {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.desktop-menu {
+  display: inline;
+}
+
+.mobilemenu__container {
+    margin-top: 25vh;
+}
+
+.mobile__menu {
+    font-size: 40px;
+    pointer-events: all;
+}
+
+@media only screen and (max-width : 768px) {
+
+  .menu-open-button {
+    display: flex;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width : 769px) {
+
+    .mobile-menu {
+        opacity: 0 !important;
+    }
+}

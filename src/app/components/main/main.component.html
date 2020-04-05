@@ -1,0 +1,71 @@
+<div class="container">
+
+  <div class="row pt-3">
+
+    <div class="col-11 col-md-7">
+
+      <div class="title-label">
+        Voice Pitch Analyzer
+      </div>
+    </div>
+
+    <div class="col-1 col-md-5">
+
+      <div class="row">
+
+        <ng-container [ngTemplateOutlet]="menu" [ngTemplateOutletContext]="{index:0, title:'Home'}">
+        </ng-container>
+
+        <ng-container [ngTemplateOutlet]="menu" [ngTemplateOutletContext]="{index:1, title:'Privacy'}">
+        </ng-container>
+
+        <ng-container [ngTemplateOutlet]="menu" [ngTemplateOutletContext]="{index:2, title:'Contact'}">
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-open-button" (click)="didClickMenu(3)"></div>
+
+  <home *ngIf="currentMenuIndex === 0"></home>
+  <privacy *ngIf="currentMenuIndex === 1"></privacy>
+  <contact *ngIf="currentMenuIndex === 2"></contact>
+</div>
+
+<div class="bottom-mask"></div>
+
+<div class="mobile-menu" [ngStyle]="getMobileMenuStyle()">
+  <div class="menu-close-button" (click)="didClickMenu(3)"></div>
+
+  <div class="row mobilemenu__container">
+
+    <ng-container [ngTemplateOutlet]="mobilemenu" [ngTemplateOutletContext]="{index:0, title:'Home'}">
+    </ng-container>
+
+    <ng-container [ngTemplateOutlet]="mobilemenu" [ngTemplateOutletContext]="{index:1, title:'Privacy'}">
+    </ng-container>
+
+    <ng-container [ngTemplateOutlet]="mobilemenu" [ngTemplateOutletContext]="{index:2, title:'Contact'}">
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #menu let-index='index' let-title='title'>
+
+  <div class="col-4 desktop-menu">
+
+    <div class="hoverable pt-2" (click)="didClickMenu(index)" [ngStyle]="getMenuStyle(index)">
+      {{title}}
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #mobilemenu let-index='index' let-title='title'>
+
+  <div class="col-12">
+
+    <div class="hoverable pt-2 text-center mobile__menu" (click)="didClickMenu(index)" [ngStyle]="getMenuStyle(index)">
+      {{title}}
+    </div>
+  </div>
+</ng-template>
